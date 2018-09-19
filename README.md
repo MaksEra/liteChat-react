@@ -2,5 +2,5 @@
 liteChat
 
 #install
-##yarn install
+#yarn install
 ## yarn start
