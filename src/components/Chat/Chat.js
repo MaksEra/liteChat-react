@@ -8,6 +8,12 @@ class Chat extends Component {
     messageInput: ''
   };
 
+  componentDidUpdate() {
+    let messageList = document.querySelector('.message-list');
+    messageList.scrollTop = messageList.scrollHeight;
+  }
+
+
   changeInputMessage = e => {
     const inputValue = e.target.value;
     this.setState({
@@ -42,6 +48,7 @@ class Chat extends Component {
           value={messageInput}
           onChange={this.changeInputMessage}
           onKeyPress={this.sendMessageOnEnter}
+          placeholder="Enter your text here"
         />
       </div>
     );
