@@ -13,7 +13,6 @@ class Chat extends Component {
     messageList.scrollTop = messageList.scrollHeight;
   }
 
-
   changeInputMessage = e => {
     const inputValue = e.target.value;
     this.setState({
@@ -22,7 +21,7 @@ class Chat extends Component {
   };
 
   sendMessageOnEnter = e => {
-    const { messages, messageInput } = this.state
+    const { messages, messageInput } = this.state;
     if (e.key === 'Enter' && this.state.messageInput !== '') {
       this.setState(state => ({
         messages: [...messages, { text: messageInput }],
@@ -32,7 +31,7 @@ class Chat extends Component {
   };
 
   render() {
-    const { messages, messageInput } = this.state
+    const { messages, messageInput } = this.state;
     return (
       <div className="chat">
         <div className="message-list">
